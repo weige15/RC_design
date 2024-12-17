@@ -168,6 +168,8 @@ The program ensures:
 ### Dependencies:
 ```bash
 pip install numpy pandas
+pip install  matplotlib
+pip install  PyQt5, pyqt5-tools
 ```
 
 ### Run the Program:
