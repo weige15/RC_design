@@ -67,7 +67,7 @@ The `starter.py` script launches the main menu where users can select the desire
 - `rc_recbeamcal_base.py`
 - `rc_tbeamcal_base.py`
 
-#### Moment Capacity (\( M_u \)):
+#### Moment Capacity ($$\( M_u \)$$):
 
 $$
 M_u = A_s f_y \left( d - \frac{a}{2} \right)
@@ -78,26 +78,26 @@ $$
 - $$\( d \)$$: Effective depth of beam  
 - $$\( a \)$$: Depth of equivalent rectangular stress block  
 
-#### Calculation of \( a \):
+#### Calculation of $$\( a \)$$:
 
-\[
+$$
 a = \frac{A_s f_y}{0.85 f'_c b}
-\]
+$$
 
 #### Rectangular vs T-Beam Design:
 
-- **Rectangular Beam**: Compression zone limited to beam width (\( b \)).
+- **Rectangular Beam**: Compression zone limited to beam width ($$\( b \)$$).
 - **T-Beam**: Includes flange with effective width:
 
-\[
+$$
 b_{\text{effective}} = \min(b_f, \text{design width})
-\]
+$$
 
-#### Reinforcement Area (\( A_s \)):
+#### Reinforcement Area ($$\( A_s \)$$):
 
-\[
+$$
 A_s = \frac{M_u}{f_y \left( d - \frac{a}{2} \right)}
-\]
+$$
 
 ---
 
@@ -106,20 +106,20 @@ A_s = \frac{M_u}{f_y \left( d - \frac{a}{2} \right)}
 - `column_function.py`
 - `rc_columncal_base.py`
 
-#### Axial Capacity (\( P_n \)):
+#### Axial Capacity ($$\( P_n \)$$):
 
-\[
+$$
 P_n = 0.85 f'_c (A_g - A_s) + f_y A_s
-\]
+$$
 
-- \( A_g \): Gross cross-sectional area  
-- \( A_s \): Area of steel reinforcement  
+- $$\( A_g \)$$: Gross cross-sectional area  
+- $$\( A_s \)$$: Area of steel reinforcement  
 
 #### Combined Axial & Bending (PMM Interaction):
 
-\[
+$$
 \frac{P_u}{P_n} + \frac{M_u}{M_n} \leq 1.0
-\]
+$$
 
 - PMM curve ensures the column does not fail under combined loads.  
 - Computed and visualized in `widget_rc_pmm.py`.
@@ -132,9 +132,9 @@ The program ensures:
 
 1. **Reinforcement Limits**: Prevent over-reinforcement (brittle failure).  
 2. **Deflection Limits**: Serviceability checks.  
-3. **Strength Reduction Factors (\( \phi \))**:  
-   - Flexure: \( \phi = 0.9 \)  
-   - Axial-bending: \( \phi = 0.75 \)  
+3. **Strength Reduction Factors $$(\( \phi \))$$**:  
+   - Flexure: $$\( \phi = 0.9 \)$$
+   - Axial-bending: $$\( \phi = 0.75 \)$$  
 4. **Cracking Control**: Limits on maximum crack width.
 
 
@@ -142,12 +142,12 @@ The program ensures:
 
 ## 5. Example Use Cases
 ### Beam Design
-1. **User inputs:** Span, width, depth, concrete strength \( f'_c \), and steel yield strength \( f_y \).
-2. **Program calculates:** Required \( A_s \) and moment capacity \( M_u \).
+1. **User inputs:** Span, width, depth, concrete strength $$\( f'_c \)$$, and steel yield strength $$\( f_y \)$$.
+2. **Program calculates:** Required $$\( A_s \)$$ and moment capacity $$\( M_u \)$$.
 3. **Output:** Reinforcement details displayed in GUI.
 
 ### Column Design
-1. **User inputs:** Axial load \( P \), moment \( M \), and column dimensions.
+1. **User inputs:** Axial load $$\( P \)$$, moment $$\( M \)$$, and column dimensions.
 2. **Program:**
    - Calculates axial-bending capacity.
    - Plots PMM interaction curve.
