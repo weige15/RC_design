@@ -73,10 +73,10 @@ $$
 M_u = A_s f_y \left( d - \frac{a}{2} \right)
 $$
 
-- \( A_s \): Steel reinforcement area  
-- \( f_y \): Steel yield strength  
-- \( d \): Effective depth of beam  
-- \( a \): Depth of equivalent rectangular stress block  
+- $$\( A_s \)$$: Steel reinforcement area  
+- $$\( f_y \)$$: Steel yield strength  
+- $$\( d \)$$: Effective depth of beam  
+- $$\( a \)$$: Depth of equivalent rectangular stress block  
 
 #### Calculation of \( a \):
 
