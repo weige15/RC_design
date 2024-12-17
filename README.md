@@ -69,9 +69,9 @@ The `starter.py` script launches the main menu where users can select the desire
 
 #### Moment Capacity (\( M_u \)):
 
-\[
+$$
 M_u = A_s f_y \left( d - \frac{a}{2} \right)
-\]
+$$
 
 - \( A_s \): Steel reinforcement area  
 - \( f_y \): Steel yield strength  
